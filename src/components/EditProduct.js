@@ -18,7 +18,7 @@ const EditUser = () => {
   }, []);
 
   const getProductById = async () => {
-    const response = await axios.get(`http://localhost:5000/product/${id}`);
+    const response = await axios.get(`https://backendappl.onrender.com/product/${id}`);
     setPid(response.data.pid);
     setName(response.data.name);
     setPrice(response.data.price);
@@ -31,7 +31,7 @@ const EditUser = () => {
   const updateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://localhost:5000/product/${id}`, {
+      await axios.patch(`https://backendappl.onrender.com/product/${id}`, {
         pid,
         name,
         price,

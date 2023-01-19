@@ -10,14 +10,14 @@ const ProductList = () => {
   }, []);
 
   const getProduct = async () => {
-    const response = await axios.get("http://localhost:5000/product");
+    const response = await axios.get("https://backendappl.onrender.com/product");
     const data=response.data;
     setProduct(data.filter(data => data.featured));
   };
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/product/${id}`);
+      await axios.delete(`https://backendappl.onrender.com/product/${id}`);
       getProduct();
     } catch (error) {
       console.log(error);

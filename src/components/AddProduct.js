@@ -16,7 +16,7 @@ const AddProduct = () => {
     e.preventDefault();
     console.log(e.target.create);
     try {
-      await axios.post("http://localhost:5000/product", {
+      await axios.post("https://backendappl.onrender.com/product", {
         pid,
         name,
         price,
